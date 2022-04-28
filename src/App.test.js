@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+
+describe('Open the webpage', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+  it('should have the title printed on the page', async () => {
+    const titleElement = screen.getByText('Caffeine Calculator');
+    expect(titleElement).toBeInTheDocument();
+  });
+})

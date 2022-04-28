@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
+
+
+const Header = (props) => {
+  return (
+    <header className="App-header">
+      <h1 className="display-1" id="page-title">{props.title}</h1>
+    </header>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title='Caffeine Calculator' />
     </div>
   );
 }

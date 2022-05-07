@@ -6,9 +6,12 @@ const LIVE_SERVER_URL = env.LIVE_SERVER_URL ? env.LIVE_SERVER_URL : 'http://loca
 
 
 describe('Functional tests', () => {
-  const browser = new Builder().forBrowser('firefox').build();
-  browser.manage().setTimeouts({implicit: 10000});
-  jest.setTimeout(30000);
+  const skip = false;
+  if (!skip) {
+    const browser = new Builder().forBrowser('firefox').build();
+    browser.manage().setTimeouts({implicit: 10000});
+    jest.setTimeout(30000);
+  }
 
   afterAll(async () => {
     await browser.quit();
@@ -21,5 +24,7 @@ describe('Functional tests', () => {
     expect(await browser.getTitle()).toEqual('Caffeine Calculator');
     // The title is visible
     expect(await browser.findElement(By.tagName('h1')).getText()).toEqual('Caffeine Calculator');
+    // There is a table to be clicked
+    expect(await browser.findElement(By.tagName('table'))).toBe(true);
   });
 });

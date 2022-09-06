@@ -5,8 +5,11 @@ import App from '../../App';
 describe('Open the webpage', () => {
   render(<App />);
 
-  it('should have the title printed on the page', async () => {
+  describe('Render the title', () => {
     const titleElement = screen.getByText('Caffeine Calculator');
-    expect(titleElement).toBeInTheDocument();
+
+    it('should have the title printed on the page', async () => {
+      expect(titleElement).toBeInTheDocument();
+    });
   });
-})
+});

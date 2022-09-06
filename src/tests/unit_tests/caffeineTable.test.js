@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import CaffeineTable from "../../components/caffeineTable";
 
 

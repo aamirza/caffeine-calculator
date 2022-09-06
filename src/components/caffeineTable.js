@@ -1,7 +1,4 @@
 const CaffeineTable = () => {
-  let state = {
-  };
-
   return (
       <div className="container">
         <div className="row table-headers">

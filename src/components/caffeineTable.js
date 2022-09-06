@@ -3,15 +3,19 @@ const CaffeineTable = () => {
   };
 
   return (
-    <table>
-      <thead>
-        <tr className='table-headers'>
-          <th>Time</th>
-          <th>Amount</th>
-          <th>Unit of Measurement</th>
-        </tr>
-      </thead>
-    </table>
+      <div className="container">
+        <div className="row table-headers">
+          <div className="col">
+              Time
+          </div>
+          <div className="col-lg-4">
+              Amount
+          </div>
+          <div className="col">
+              Unit of Measurement
+          </div>
+        </div>
+      </div>
   );
 }
 

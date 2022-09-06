@@ -4,7 +4,7 @@ import CaffeineTable from "../../components/caffeineTable";
 
 describe('Caffeine table has the right components', () => {
   render(<CaffeineTable />);
-  const headers = document.querySelectorAll('thead tr th');
+  const headers = document.querySelectorAll('.table-headers .col, .table-headers .col-lg-4');
 
   describe('Table properties', () => {
     it('should have three headers', () => {

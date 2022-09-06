@@ -1,7 +1,7 @@
 const CaffeineTable = () => {
   return (
       <div className="container">
-        <div className="row table-headers">
+        <div className="row table-headers border-top">
           <div className="col">
               Time
           </div>
